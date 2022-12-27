@@ -9,6 +9,8 @@ using namespace std;
 // Successful attempt to read files into string
 //
 int main () {
+  string filepath;
+  filepath = "test_input10.txt";
   /*
 //first method from w3schools
   // Create a text file
@@ -24,7 +26,7 @@ int main () {
   string myText;
 
   // Read from the text file
-  ifstream MyReadFile("filename.txt");
+  ifstream MyReadFile(filepath);
 
   // Use a while loop together with the getline() function to read the file line by line
   while (getline (MyReadFile, myText)) {
@@ -37,7 +39,7 @@ int main () {
 //
 // Alternate read file to string method
   
-   ifstream f("test_input3.txt");
+   ifstream f(filepath);
    string strp;
    if(f) {
       ostringstream ss;
@@ -50,9 +52,9 @@ int main () {
 //
 // Best 3rd method of reading from file into string
 /*
-  ifstream file("test_input6.txt");
+  ifstream file(filepath);
   if (!file.is_open()) {
-    cerr << "Error: Could not open file " << "test_input3.txt" << endl;
+    cerr << "Error: Could not open file " << filepath<< endl;
     return 1;
   }
   // Read the file into a string
