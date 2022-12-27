@@ -31,6 +31,7 @@ int main () {
     // Output the text from the file
     cout << myText;
   }
+  MyReadFile.close();
 */
 // end of method from w3schools
 //
@@ -44,7 +45,7 @@ int main () {
       strp = ss.str();
    }
    strp.pop_back(); 
-  
+   f.close();
 // end of alternate read file to string method
 //
 // Best 3rd method of reading from file into string
@@ -59,8 +60,7 @@ int main () {
 
 strp.pop_back();
 
-
-This will remove all newline characters (or eof marker)from the strp string, resulting in a string with the same length as the one produced by directly inputting the text via the console.
+//This will remove all newline characters (or eof marker)from the strp string, resulting in a string with the same length as the one produced by directly inputting the text via the console.
   // Close the file
   file.close();
   //
